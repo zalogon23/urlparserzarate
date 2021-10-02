@@ -1,10 +1,10 @@
 document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("parse-button")) {
-    handleParse();
-  }
-  if (e.target.classList.contains("copy-button")) {
-    handleCopy();
-  }
+  if (e.target.classList.contains("parse-button")) handleParse();
+  if (e.target.classList.contains("copy-button")) handleCopy()
+})
+
+document.addEventListener("keydown", (e) => {
+  if (e.target.classList.contains("field") && e.key === "Enter") handleParse()
 })
 
 function handleParse() {
