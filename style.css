@@ -53,6 +53,11 @@ body{
   padding: calc(var(--paragraph) / 6) calc(var(--paragraph) / 2);
   transition-property: all;
   transition-duration: 200ms;
+  width: 25rem;
+}
+
+.field::placeholder{
+  color: #bab;
 }
 
 .field:focus {
