@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-size: 62.5%;
+  outline: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+:root {
+  --paragraph: 1.8rem;
+  --heading: 2.5rem;
+}
+
+.heading {
+  font-size: var(--heading);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: calc(var(--heading) / 2);
+  padding-left: calc(var(--heading) * 0.6);
+  min-height: 10vh;
+  padding-top: calc();
+}
+
+.parser {
+  display: flex;
+  min-height: 90vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--paragraph) * 2);
+  padding: calc(var(--paragraph) * 1.5);
+  background: #77b;
+}
+
+.fieldgroup{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field {
+  border-radius: calc(var(--paragraph) + 0.2rem);
+  font-size: var(--paragraph);
+  border-color: transparent;
+  padding: calc(var(--paragraph) / 6) calc(var(--paragraph) / 2);
+  transition-property: all;
+  transition-duration: 200ms;
+}
+
+.field:focus {
+  box-shadow: 0 0 1.3rem rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+.parse-button {
+  background: #fff;
+  border-color: transparent;
+  cursor: pointer;
+  font-size: var(--paragraph);
+  border-radius: calc(var(--paragraph) / 6);
+  padding: calc(var(--paragraph) / 4);
+}
+
+.helper {
+  font-size: var(--paragraph);
+  color: #c7a;
+  padding: calc(var(--paragraph) / 3);
+}
+
+.hidden {
+  display: none;
+}
+
+.resultgroup {
+  background: #0006;
+  padding: calc(var(--paragraph) * 2.8) calc(var(--paragraph) * 2);
+  border-radius: calc(var(--paragraph) * 0.5);
+  position: relative;
+}
+
+.result,
+.copy-button {
+  font-size: var(--paragraph);
+  color: white;
+}
+
+.copy-button {
+  position: absolute;
+  background: #000;
+  border-color: transparent;
+  border-radius: calc(var(--paragraph) * 0.3);
+  padding: calc(var(--paragraph) * 0.3);
+  top: calc(var(--paragraph) * 0.3);
+  right: calc(var(--paragraph) * 0.3);
+  cursor: pointer;
+}
+
+.copy-button, .parse-button{
+  transition-property: transform;
+  transition-duration: 200ms;
+}
+
+.copy-button:focus, .parse-button:focus{
+  transform: scale(1.04);
+}
